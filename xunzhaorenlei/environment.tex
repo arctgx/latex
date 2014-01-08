@@ -1,0 +1,30 @@
+%--------------------------------------
+% 环境配置
+%--------------------------------------
+
+% 设置显示的章节格式
+\titleformat{\chapter}[block]{\leftline\Large\bfseries}{第\thechapter章\quad}{1em}{}
+% 设置目录中的章节格式
+\titlecontents{chapter}[1pc]{}{}{\large}{\hspace{.5em}\titlerule*[10pt]{$\cdot$}\thecontentspage}
+
+% 段落首行缩进
+\setlength{\parindent}{2em}
+% 段落间距离
+\setlength{\parskip}{0pt}
+% 行间距
+\linespread{1.5}
+\setlength{\lineskiplimit}{2.625pt} % 5号字 1/4字高
+\setlength{\lineskip}{2.625pt}
+
+
+%--------------------------------------
+% 订制命令
+%--------------------------------------
+\renewcommand{\contentsname}{目\quad 录}
+
+\newenvironment{myquote}
+    {\begin{quotation}\kaishu\zihao{-5}}
+    {\end{quotation}}
+\newenvironment{myflushright}
+    {\begin{flushright}\youyuan\zihao{-4}}
+    {\end{flushright}}
