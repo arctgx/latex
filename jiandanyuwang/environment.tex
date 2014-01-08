@@ -1,0 +1,24 @@
+%--------------------------------------
+% 环境配置
+%--------------------------------------
+
+% 设置显示的章节格式
+\titleformat{\chapter}{\filleft\Huge\bfseries}{}{0em}{}
+\titleformat{\section}[block]{\leftline\Large\bfseries}{}{1em}{}
+% 设置目录中的章节格式
+\titlecontents{chapter}[3pc]{\addvspace{1.5pc}\filleft}{}{\Huge\bfseries}{\hspace{.5em}\titlerule*[10pt]{$\cdot$}\thecontentspage}
+\titlecontents{section}[1pc]{}{}{\large}{\hspace{.5em}\titlerule*[10pt]{$\cdot$}\thecontentspage}
+
+% 段落首行缩进
+\setlength{\parindent}{2em}
+% 段落间距离
+\setlength{\parskip}{1.3em}
+% 行间距
+\linespread{1.5}
+
+
+%--------------------------------------
+% 订制命令
+%--------------------------------------
+\renewcommand{\chaptername}{}
+\renewcommand{\contentsname}{目\quad 录}
