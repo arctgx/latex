@@ -1,0 +1,92 @@
+\documentclass[a4paper,UTF8]{ctexbook}
+
+%--------------------------------------
+% 使用宏包
+%--------------------------------------
+
+% 设置章节
+
+% 中文环境及utf8编码
+\usepackage{CJKutf8}
+% 首段落缩进
+\usepackage{indentfirst}
+% 设置标题格式
+\usepackage{titlesec}
+% 设置目录格式
+\usepackage{titletoc}
+% 超链接
+\usepackage[unicode=true, colorlinks, linkcolor=red, anchorcolor=blue, citecolor=green]{hyperref}
+
+
+
+\begin{document}
+\begin{CJK*}{UTF8}{song}
+
+% 设置显示的章节格式
+\titleformat{\chapter}{\centering\Huge\bfseries}{}{1em}{}
+\titleformat{\section}{\centering\Huge\bfseries}{}{1em}{}
+% 设置目录中的章节格式
+\titlecontents{chapter}[3pc]{\addvspace{1.5pc}\filcenter}{}{\huge}{}
+\titlecontents{section}[1pc]{\addvspace{1.5pc}}{}{\huge}{\hspace{.5em}\titlerule*[10pt]{$\cdot$}\thecontentspage}
+
+\renewcommand{\chaptername}{}
+\renewcommand{\contentsname}{目\quad 录}
+
+%--------------------------------------
+% 环境设置
+%--------------------------------------
+% 段落首行缩进
+\setlength{\parindent}{2em}
+% 段落间距离
+\setlength{\parskip}{1.3em}
+% 行间距
+\linespread{1.5}
+
+
+%--------------------------------------
+% 标题
+%--------------------------------------
+\title{\Huge 随波逐流之一代军师}
+\author{随波逐流}
+\date{\today}
+\maketitle
+
+%--------------------------------------
+% 目录
+%--------------------------------------
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+%--------------------------------------
+% 正文
+%--------------------------------------
+
+% 序章
+\include{xu}
+
+% 第一部　南楚状元
+\include{chapter_1}
+
+% 第二部　萧墙之乱
+\include{chapter_2}
+
+% 第三部　夺嫡风云
+\include{chapter_3}
+
+% 第四部　烽烟再起
+\include{chapter_4}
+
+% 第五部　纵横捭阖
+\include{chapter_5}
+
+% 第六部　天长地久
+\include{chapter_6}
+
+% 外传　清梵曲
+\include{waizhuan}
+
+
+
+
+\end{CJK*}
+\end{document}
